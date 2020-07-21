@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import  Router from "Components/Router";
-import globalcss from "Components/Globalcss"
+import Globalcss from "Components/Globalcss"
 
 class App extends Component {
     render() {
         return <>
-        <globalcss></globalcss>
+        <Globalcss></Globalcss>
          <Router></Router>
         </>
     }
