@@ -1,10 +1,20 @@
 import React from "react";
-import "./Header.css"
+import styled from "styled-components"
 
 
+
+
+
+const Sul = styled.ul`
+   display: flex;
+   & hover {
+       background-color: red;
+   };
+`
+~
 export default () => (
-    <header className = "nav">
-      <ul>
+    <header>
+      <Sul>
        <li>
            <a href="/">Home</a>
         </li>
@@ -13,6 +23,6 @@ export default () => (
            </li>
        <li><a href="/tv/info">제작중입니다</a></li>
        <li><a href="/search">Search</a></li>
-      </ul>
+      </Sul>
     </header>
 )
