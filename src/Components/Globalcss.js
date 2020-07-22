@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import {} from "react-native-linear-gradient";
 
 
 const globalcss = createGlobalStyle`

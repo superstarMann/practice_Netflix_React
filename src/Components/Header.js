@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import {withRouter} from "react-router-dom";
 
 const Sheader = styled.header`
   display: flex;
@@ -22,19 +23,22 @@ const Sul = styled.ul`
 `
 const Sli = styled.li`
 width: 80px;
+:nth-child(4) {width: 100px; margin-left: 10px;};
+
+border-bottom : 5px solid ${props => props.part ? "#40E0D0" : "transparent" };
 `;
 
-export default () => (
-    <Sheader>
-      <Sul>
-       <Sli>
-           <a href="/">Home</a>
-        </Sli>
-       <Sli>
-           <a href="/tv">TV</a>
-           </Sli>
-       <Sli><a href="/search">Search</a></Sli>
-       <Sli><a href="/tv/info">Comming Soon</a></Sli>
-      </Sul>
-    </Sheader>
-)
+export default withRouter(({location: {pathname}}) => (
+  <Sheader>
+    <Sul>
+     <Sli part = {pathname === "/" }>
+         <a href="/">Home</a>
+      </Sli>
+     <Sli part = {pathname === "/tv"}>
+         <a href="/tv">TV</a>
+         </Sli>
+     <Sli part = {pathname === "/search"}><a href="/search">Search</a></Sli>
+     <Sli part = {pathname === "/tv/info"}><a href="/tv/info">Comming Soon</a></Sli>
+    </Sul>
+  </Sheader>
+));
