@@ -11,7 +11,7 @@ const Sheader = styled.header`
   left: 0;
   align-items: center;
   padding: 0px, 15px;
-  background-color: rgba(0,0,0,0.8);
+  background-color:rgba(0,0,0,0.8);
   box-shadow: 0px 1px 5px 2px rgba(20, 20, 20,0.8); 
 `;
 
